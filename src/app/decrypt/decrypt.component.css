@@ -1,0 +1,17 @@
+.form-control, .alert {
+    width: 96%;
+    margin: auto;
+}
+
+.preview {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    margin: auto;
+}

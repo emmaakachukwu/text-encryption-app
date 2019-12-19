@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 30px;
+    background: #f1f1f1;
+}
+
+.imgc {
+    height: 182px;
+    width: 182px;
+}
+
+.alert {
+    width: 950px;
+    margin: auto;
+}
+
+.holder {
+    background: #fff;
+    border-radius: 7px;
+    width: 950px;
+    margin: 30px auto;
+    padding-bottom: 3px;
+    box-shadow: 3px 5px 5px #aaa5a5;
+}
+
+.top {
+    height: 50px;
+    background: #aaa5a5;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 10px;
+}
+
+h2 {
+    padding: 100px 100px 50px;
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: 'Montserrat';
+}
+
+@media ( max-width: 768px ) {
+    .holder {
+        max-width: 100%;
+    }
+
+    h2 {
+        padding: 50px 50px 25px;
+    }
+
+    h2, h3 {
+        font-size: 18px;
+    }
+
+    h3 {
+        line-height: 25px;
+    }
+
+    body {
+        padding: 10px;
+    }
+}

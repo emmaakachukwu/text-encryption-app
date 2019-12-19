@@ -1,0 +1,66 @@
+<body>
+    <div class="holder">
+        <div class="top">
+            <h3>Encrypt</h3>
+        </div>
+        <br>
+        <h2>Send encrypted files, text with ease. Protect with password as well.</h2>
+        <button class="btn btn-primary" (click)="openModal()">Click to upload image</button>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <!-- for alerting info/message to the user -->
+    <div class="alert alert-info" *ngIf='message'>{{message}}</div>
+
+    <!-- displays uploaded files -->
+    <div class="holder" *ngIf = "uploaded">
+        <div class="top">
+            <h3>Uploaded Images</h3>
+        </div>
+
+        <div id="img" class="card upl-holder" *ngFor="let u of uploaded; let i = index">
+            <p> <span>{{u}}</span> <span title="Copy ID" class="close delete copy" (click)=copyID(i)><i class="fa fa-copy"></i></span></p>
+        </div>
+    </div>
+
+    <!-- the modal div -->
+    <div id="modaldiv" class="modal">
+        <div class="modal-content">
+            <div class="">
+                <form (ngSubmit)="submit(a)" #a="ngForm">
+                    <p class="close" (click)='closeModal(a)'>&times;</p>
+                    <input type="file" ngModel name="file" id="file" class="upload" (change)="onChange($event)" accept="image/*" />
+                    <div for="file" id="file">
+
+                        <!-- this div is hidden when image is selected -->
+                        <div id="add" *ngIf="!imgFile">
+                            <label for="file">
+                                <i class="fa fa-plus add"></i><br>
+                                <span>Click to select image</span>
+                            </label>
+                        </div>
+
+                        <!-- previews the selected image -->
+                        <div *ngIf="imgFile">
+                            <img [src]="imgFile" class="preview" alt=""><br>
+
+                            <!-- button for removing the selected image incase the user wishes to change the image -->
+                            <button class="btn btn-light remove-img" (click)='removeImage()'>Remove Image</button>
+                        </div>
+                    </div><br>
+                    <textarea rows="2" placeholder="Enter text" class="form-control" ngModel name="text" required></textarea><br>
+                    <input type="password" placeholder="Enter password" class="form-control" ngModel name="password" required><br>
+                    <div *ngIf='error'>
+                        <div class="alert alert-danger" id="error">
+                            <p>{{error}}</p>
+                        </div>
+                        <br>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit" [disabled]='!imgFile'>Submit</button>
+                </form>
+            </div>
+        </div> 
+    </div>
+</body>

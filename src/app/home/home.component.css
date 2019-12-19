@@ -1,0 +1,106 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+}
+
+.close {
+    color: #aaa;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+}
+
+.add {
+    font-size: 50px;
+}
+
+#add {
+    border: 1px dashed #808080;
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#add span {
+    font-size: 20px;
+}
+
+.submit {
+    float: right;
+}
+
+.preview {
+    width: 50%;
+    height: 150px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.remove-img {
+    display: block;
+    margin: auto;
+}
+
+#file {
+    margin-top: 15px;
+}
+
+.upl-holder {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 3px 5px 2px #f1f1f1;
+}
+
+.delete {
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.copy {
+    margin-right: 10px;
+}
+
+button {
+    display: block;
+    margin: auto;
+}
+
+#error {
+    width: 100%;
+    text-align: center;
+}

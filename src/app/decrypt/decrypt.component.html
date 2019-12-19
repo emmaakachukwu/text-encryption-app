@@ -1,0 +1,19 @@
+<body>
+    <div class="holder">
+        <div class="top">
+            <h3>Decrypt</h3>
+        </div>
+        <br>
+        <img [src]='decryptimg' class="preview" *ngIf='decryptimg'>
+        <h2>Input ID and password to decrypt</h2>
+        <div class="alert alert-danger" *ngIf='message'>{{message}}</div><br>
+        <form (ngSubmit)='decrypt(d)' #d='ngForm'>
+            <input class="form-control" placeholder="Enter ID" type="text" ngModel name="id" required><br>
+            <input class="form-control" placeholder="Enter password" type="password" ngModel name="password" required><br>
+            <button class="btn btn-primary" [disabled]='d.invalid'>Decrypt</button>
+        </form>
+        <br>
+        <br>
+        <br>
+    </div>
+</body>
